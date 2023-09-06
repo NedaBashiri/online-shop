@@ -13,7 +13,7 @@ export class ProductService {
   constructor(private httpClient: HttpClient) {
   }
 
-  getListProductsPaginate(): Observable<Product[]> {
+  getListProductList(): Observable<Product[]> {
     return this.httpClient.get<GetResponse>(this.url).pipe(
       map(response=> response._embedded.products)
     );
