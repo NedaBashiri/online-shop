@@ -1,3 +1,17 @@
-<p *ngFor="let product of products">
-{{product.name}}: {{product.unitPrice | currency: 'USD'}}
-</p>
+<table class="table">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Units in Stock</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr *ngFor="let product of products">
+    <th>{{product.name}}</th>
+    <th>{{product.unitPrice | currency: 'USD'}}</th>
+    <th>{{product.unitsInStock}}</th>
+  </tr>
+  </tbody>
+</table>
