@@ -6,6 +6,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { ProductListComponent } from './components/product-list/product-list.component';
+import {ProductService} from "./services/product.service";
 
 
 
@@ -29,7 +30,7 @@ import { ProductListComponent } from './components/product-list/product-list.com
 
   ],
 
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
