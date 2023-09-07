@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ProductService} from "../../services/product.service";
 import {ProductCategory} from "../../common/product-category";
 
@@ -7,7 +7,7 @@ import {ProductCategory} from "../../common/product-category";
   templateUrl: './product-category-menu.component.html',
   styleUrls: ['./product-category-menu.component.css']
 })
-export class ProductCategoryMenuComponent {
+export class ProductCategoryMenuComponent implements OnInit{
   productCategories: ProductCategory[] = [];
 
   constructor(private productService: ProductService) { }
