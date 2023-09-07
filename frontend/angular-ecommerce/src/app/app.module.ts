@@ -7,6 +7,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { ProductListComponent } from './components/product-list/product-list.component';
 import {ProductService} from "./services/product.service";
+import { ProductCategoryMenuComponent } from './components/product-category-menu/product-category-menu.component';
 
 
 
@@ -17,6 +18,7 @@ import {ProductService} from "./services/product.service";
   declarations: [
     AppComponent,
     ProductListComponent,
+    ProductCategoryMenuComponent,
 
 
   ],
