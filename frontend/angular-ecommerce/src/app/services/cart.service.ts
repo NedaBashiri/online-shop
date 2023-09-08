@@ -79,7 +79,7 @@ export class CartService {
   remove(theCartItem: CartItem) {
 
     const itemIndex = this.cartItems.findIndex( tempCartItem => tempCartItem.id === theCartItem.id );
-    
+
     if (itemIndex > -1) {
       this.cartItems.splice(itemIndex, 1);
 
