@@ -22,14 +22,10 @@ export class CartService {
 
     if (this.cartItems.length > 0) {
 
-      for (let tempCartItem of this.cartItems) {
-        if (tempCartItem.id === theCartItem.id) {
-          existingCartItem = tempCartItem;
-          alreadyExistsInCart = true;
-          break;
-        }
-      }
+      existingCartItem = this.cartItems.find( tempCartItem => tempCartItem.id === theCartItem.id );
+
       alreadyExistsInCart = (existingCartItem != undefined);
+      
     }
 
     if (alreadyExistsInCart) {
