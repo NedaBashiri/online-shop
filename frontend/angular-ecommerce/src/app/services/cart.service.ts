@@ -69,5 +69,5 @@ export class CartService {
     console.log('----');
   }
 
-  
+
 }
