@@ -15,5 +15,5 @@ export class CheckoutService {
   placeOrder(purchase: Purchase): Observable<any>{
     return this.httpClient.post(this.purchaseUrl, purchase);
   }
-  
+
 }

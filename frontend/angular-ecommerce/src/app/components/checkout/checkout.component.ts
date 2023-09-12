@@ -5,6 +5,8 @@ import {Country} from "../../common/country";
 import {State} from "../../common/state";
 import {Luv2ShopValidators} from "../../validators/luv2-shop-validators";
 import {CartService} from "../../services/cart.service";
+import {CheckoutService} from "../../services/checkout.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-checkout',
@@ -28,7 +30,9 @@ export class CheckoutComponent implements OnInit{
 
   constructor(private formBuilder: FormBuilder,
               private luv2ShopFormService: Luv2ShopFormService,
-              private cartService: CartService) { }
+              private cartService: CartService,
+              private checkoutService: CheckoutService,
+              private router: Router) { }
 
   ngOnInit(): void {
 
