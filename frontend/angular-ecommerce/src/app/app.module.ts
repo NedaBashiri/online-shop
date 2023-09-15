@@ -16,9 +16,14 @@ import { CartDetailsComponent } from './components/cart-details/cart-details.com
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { LoginComponent } from './components/login/login.component';
 import { LoginStatusComponent } from './components/login-status/login-status.component';
+import {OKTA_CONFIG, OktaAuthModule} from "@okta/okta-angular";
+import myAppConfig from "./config/my-app-config";
+import {OktaAuth} from "@okta/okta-auth-js";
 
 
+const oktaConfig = myAppConfig.oidc;
 
+const oktaAuth = new OktaAuth(oktaConfig);
 
 
 
@@ -44,10 +49,11 @@ import { LoginStatusComponent } from './components/login-status/login-status.com
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
+    OktaAuthModule
   ],
 
-  providers: [ProductService],
+  providers: [ProductService, { provide: OKTA_CONFIG, useValue: { oktaAuth }}],
   bootstrap: [AppComponent]
 })
 export class AppModule {
