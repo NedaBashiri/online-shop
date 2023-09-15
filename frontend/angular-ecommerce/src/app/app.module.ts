@@ -14,6 +14,7 @@ import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import { CartStatusComponent } from './components/cart-status/cart-status.component';
 import { CartDetailsComponent } from './components/cart-details/cart-details.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 
@@ -30,6 +31,7 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
     CartStatusComponent,
     CartDetailsComponent,
     CheckoutComponent,
+    LoginComponent,
 
 
   ],
