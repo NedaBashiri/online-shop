@@ -20,7 +20,7 @@ export class CartService {
 
     if (data != null) {
       this.cartItems = data;
-      
+
       this.computeCartTotals();
     }
   }
@@ -61,6 +61,10 @@ export class CartService {
     this.totalQuantity.next(totalQuantityValue);
 
     this.logCartData(totalPriceValue, totalQuantityValue);
+  }
+
+  persistCartItems() {
+    this.storage.setItem('cartItems', JSON.stringify(this.cartItems));
   }
 
   logCartData(totalPriceValue: number, totalQuantityValue: number) {
