@@ -35,7 +35,7 @@ export class LoginStatusComponent implements OnInit{
           this.userFullName = res.name as string;
 
           const theEmail = res.email;
-          
+
           this.storage.setItem('userEmail', JSON.stringify(theEmail));
         }
       );
